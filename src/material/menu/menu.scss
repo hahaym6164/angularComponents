@@ -13,11 +13,16 @@ mat-menu {
   display: none;
 }
 
+.mat-mdc-menu-trigger.stay-open-while-press[aria-expanded='true'] {
+  .mat-mdc-button-persistent-ripple:before {
+    opacity: var(--mat-icon-button-pressed-state-layer-opacity);
+  }
+}
+
 .mat-mdc-menu-content {
   margin: 0;
   padding: 8px 0;
   outline: 0;
-
   &,
   .mat-mdc-menu-item .mat-mdc-menu-item-text {
     @include vendor-prefixes.smooth-font();
@@ -165,7 +170,9 @@ mat-menu {
     // The class selector isn't specific enough to overide the link pseudo selectors so we need
     // to target them specifically, otherwise the item color might be overwritten by the user
     // agent resets of the app.
-    &, &:visited, &:link {
+    &,
+    &:visited,
+    &:link {
       color: token-utils.slot(item-label-text-color);
     }
 
