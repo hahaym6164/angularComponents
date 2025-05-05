@@ -168,7 +168,6 @@ export class MatMenu implements AfterContentInit, MatMenuPanel<MatMenuItem>, OnI
 
   /** aria-describedby for the menu panel. */
   @Input('aria-describedby') ariaDescribedby: string;
-
   /** Position of the menu in the X axis. */
   @Input()
   get xPosition(): MenuPositionX {
@@ -540,7 +539,6 @@ export class MatMenu implements AfterContentInit, MatMenuPanel<MatMenuItem>, OnI
       // the items and walking up the DOM.
       menuPanel = this._directDescendantItems.first!._getHostElement().closest('[role="menu"]');
     }
-
     return menuPanel;
   }
 }

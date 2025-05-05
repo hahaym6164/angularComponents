@@ -58,9 +58,12 @@
 }
 
 @mixin mat-private-button-ripple(
-    $ripple-color-token, $state-layer-color-token, $disabled-state-layer-color-token,
-    $hover-state-layer-opacity-token, $focus-state-layer-opacity-token,
-    $pressed-state-layer-opacity-token
+  $ripple-color-token,
+  $state-layer-color-token,
+  $disabled-state-layer-color-token,
+  $hover-state-layer-opacity-token,
+  $focus-state-layer-opacity-token,
+  $pressed-state-layer-opacity-token
 ) {
   .mat-ripple-element {
     background-color: token-utils.slot($ripple-color-token);
@@ -131,7 +134,10 @@
 }
 
 @mixin mat-private-button-horizontal-layout(
-    $icon-spacing-token, $icon-offset-token, $with-icon-horizontal-padding-token: null) {
+  $icon-spacing-token,
+  $icon-offset-token,
+  $with-icon-horizontal-padding-token: null
+) {
   $icon-spacing: token-utils.slot($icon-spacing-token, true);
   $icon-offset: token-utils.slot($icon-offset-token, true);
 
